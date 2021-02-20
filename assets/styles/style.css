@@ -1,0 +1,95 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    margin-bottom: auto;
+    border-radius: 0px;
+}
+
+.navbar-olink {
+    font-size: 15px;
+}
+
+.sectionhead {
+    text-align: center;
+}
+
+.sectionbook {
+    margin: auto;
+    background-color: yellow;
+    text-align: center;
+    width: 50%;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.mainsec {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/cedcab_backimg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    margin: 20px;
+    max-width: 450px;
+    padding: 16px;
+    background-color: white;
+}
+
+select {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.btn {
+    background-color: #afa04c;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btnn {
+    background-color: #afa04c;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: black;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        border-radius: 0px;
+    }
+}
