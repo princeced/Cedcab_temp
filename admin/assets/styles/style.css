@@ -26,10 +26,55 @@
     font-weight: bold;
 }
 
+
+/**aside**/
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px;
+    font-size: 28px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/***/
+
 .mainsec {
     width: 100%;
     height: 100vh;
-    background-image: url("../images/cedcab_backimg.jpeg");
+    background-image: url("../../../assets/images/cedcab_backimg.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,13 +128,51 @@ input {
     margin-bottom: 20px;
 }
 
-footer {
+.foot {
+    position: fixed;
     background-color: black;
     padding: 30px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
     .navbar {
         border-radius: 0px;
     }
+}
+
+.outercont {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont;
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+}
+
+.container1,
+.container2,
+.container3,
+.container4 {
+    padding: 2%;
+    width: 22%;
+    margin: 1.5%;
+    float: left;
+    height: 30vh;
+    text-align: center;
+    font-size: 1.4rem;
+    background-color: grey;
+    color: white;
+    border-radius: 0px 25px 0px 25px;
+    opacity: 0.9;
+}
+
+.tbb {
+    margin: auto;
+    width: 90%;
+    color: black;
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 0px 25px 0px 25px;
 }

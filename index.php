@@ -1,5 +1,5 @@
 
-    <?php include_once 'header.php' ?>
+    <?php include_once 'layout/header.php' ?>
 
     <section class="mainsec">
 
@@ -12,44 +12,32 @@
 
 
                 <label for="pickup"><b>PICKUP LOCATION</b></label>
-                <select class="selectitem" id="pickupLocation" name="pickupLocation" onchange="showdrop(this)" required>
+                <select class="selectitem" id="pickupLocation" name="pickupLocation" required>
                     <option value="">Select Pickup Location</option>
-                    <?php
-                    foreach ($locations as $key => $values) {
-                    ?>
-                        <option value="<?= trim($values, ''); ?>"><?= $key ?></option>
-                    <?php }
-                    ?>
+                    
                 </select>
 
                 <label for="drop"><b>DROP LOCATION</b></label>
                 <select class="selectitem" id="dropLocation" name="dropLocation" required>
                     <option value="">Select Drop Location</option>
-                    <?php
-                    foreach ($locations as $key => $values) {
-                    ?>
-                        <option value="<?= trim($values, '') ?>"><?= $key ?></option>
-                    <?php }
-                    ?>
-
+                    
                 </select>
 
                 <label for="cabtype"><b>CAB TYPE</b></label>
                 <select class="selectitem" id="cabtype" name="cabtype" required>
                     <option value="">Select Cab type</option>
-                    <?php
-                    foreach ($cabTypes as $key => $values) {
-                    ?>
-                        <option value="<?= trim($key, '') ?>"><?= $key ?></option>
-                    <?php }
-                    ?>
+                    <option value="CedMicro">Ced Micro</option>
+                    <option value="CedMini">Ced Mini</option>
+                    <option value="CedRoyal">Ced Royal</option>
+                    <option value="CedSUV">Ced SUV</option>
                 </select>
 
                 <label for=""><b>LUGGAGE</b></label>
                 <input type="number" placeholder="" id="luggage" name="luggage" required>
 
 
-                <button type="submit" class="btn" id="submit" name="submit">CALCULATE FARE</button>
+                <button type="button" class="btn" id="calsubmit" name="submit">CALCULATE FARE</button>
+                <span class="errors" style="font-weight: bold;color:red;"></span>
             </form>
         </div>
 
@@ -71,8 +59,8 @@
                         <div id="detailsdata"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Book </button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" id="bookcab" class="btn btn-primary"> Book </button>
+                        <button type="button" id="" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -80,6 +68,22 @@
 
 
 
+        <div class="modal" tabindex="-1" role="dialog" id="modalcheckuser">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    
+                    <div class="modal-body">
+                    
+                        <div id="quesdata"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="yeslogin" class="btn btn-primary"> YES </button>
+                        <button type="button" id="nosignup" class="btn btn-secondary" data-dismiss="modal">NO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-    <?php include_once 'footer.php' ?>
+
+    <?php include_once 'layout/footer.php' ?>

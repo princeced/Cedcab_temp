@@ -1,5 +1,5 @@
 
-    <?php include_once 'header.php' ?>
+    <?php include_once 'layout/header.php' ?>
 
     <section class="mainsec">
 
@@ -12,10 +12,10 @@
                 <h2 class="sectionhead">LOGIN YOUR WAY </h2>
 
                 <label for="username"><b>USERNAME</b></label>
-                <input type="email" placeholder="" id="cedemail" name="cedemail" required>
+                <input type="email" placeholder="Enter Email" id="cedemail" name="cedemail" required>
 
                 <label for="cedpassword"><b>PASSWORD</b></label>
-                <input type="password" placeholder="" id="cedpassword" name="cedpassword" required>
+                <input type="password"  id="cedpassword" name="cedpassword" required>
 
                 <button type="button" class="btn" id="loginsubmit" name="submit"> LOGIN </button>
             </form>
@@ -27,5 +27,5 @@
     </section>
 
 
-    <?php include_once 'footer.php' ?>
+    <?php include_once 'layout/footer.php' ?>
 
