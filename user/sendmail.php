@@ -24,7 +24,7 @@ class sendmail
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
         $mail->Username = "prince.singh55989@gmail.com";
-        $mail->Password = "@prince@1234";
+        $mail->Password = "";
         $mail->Port = 465;
         $mail->SMTPSecure = "ssl";
 
